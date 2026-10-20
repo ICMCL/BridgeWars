@@ -1,0 +1,66 @@
+{
+ "type": "minecraft:multi_action",
+ "title": {
+  "text": "⚙ 战桥设置",
+  "color": "gold"
+ },
+ "pause": false,
+ "columns": 2,
+ "body": {
+  "type": "minecraft:plain_message",
+  "contents": {
+   "text": "设置对下一局生效；游戏进行中不能修改。",
+   "color": "gray"
+  },
+  "width": 300
+ },
+ "actions": [
+  {
+   "label": {
+    "text": "规则开关",
+    "color": "yellow"
+   },
+   "width": 140,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_cfg set 1"
+   }
+  },
+  {
+   "label": {
+    "text": "阶段时间",
+    "color": "yellow"
+   },
+   "width": 140,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_cfg set 2"
+   }
+  },
+  {
+   "label": {
+    "text": "查看当前设置",
+    "color": "aqua"
+   },
+   "width": 140,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_cfg set 4"
+   }
+  },
+  {
+   "label": {
+    "text": "恢复默认",
+    "color": "red"
+   },
+   "width": 140,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_cfg set 3"
+   }
+  }
+ ],
+ "exit_action": {
+  "label": "关闭"
+ }
+}

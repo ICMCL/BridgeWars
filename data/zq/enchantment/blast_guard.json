@@ -1,0 +1,38 @@
+{
+ "description": {
+  "text": "烈焰弹护符"
+ },
+ "supported_items": "#minecraft:chest_armor",
+ "weight": 1,
+ "max_level": 1,
+ "min_cost": {
+  "base": 1,
+  "per_level_above_first": 0
+ },
+ "max_cost": {
+  "base": 1,
+  "per_level_above_first": 0
+ },
+ "anvil_cost": 1,
+ "slots": [
+  "chest"
+ ],
+ "effects": {
+  "minecraft:damage_immunity": [
+   {
+    "requirements": {
+     "type": "minecraft:damage_source_properties",
+     "predicate": {
+      "tags": [
+       {
+        "id": "#zq:knock_only",
+        "expected": true
+       }
+      ]
+     }
+    },
+    "effect": {}
+   }
+  ]
+ }
+}

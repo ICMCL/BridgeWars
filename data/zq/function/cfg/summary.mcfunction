@@ -1,0 +1,22 @@
+tellraw @a {text:"====== 战桥当前设置 ======",color:"gold"}
+execute if score #o_bridge zq_var matches 0 run tellraw @a [{text:"桥：",color:"gray"},{text:"不生成",color:"white"}]
+execute if score #o_bridge zq_var matches 1 run tellraw @a [{text:"桥：",color:"gray"},{text:"分阶段（开启阶段显示开局后累计时间；全部关闭则不生成桥）",color:"white"}]
+execute if score #o_bridge zq_var matches 1 if score #t_gap zq_var matches 1.. run tellraw @a [{text:"  间断桥：开局后 ",color:"gray"},{score:{name:"#t_gap",objective:"zq_var"},color:"aqua"},{text:"s",color:"gray"}]
+execute if score #o_bridge zq_var matches 1 if score #t_gap zq_var matches 0 run tellraw @a {text:"  间断桥：关闭",color:"gray"}
+execute if score #o_bridge zq_var matches 1 if score #t_full zq_var matches 1.. run tellraw @a [{text:"  完整桥：开局后 ",color:"gray"},{score:{name:"#t_full",objective:"zq_var"},color:"aqua"},{text:"s",color:"gray"}]
+execute if score #o_bridge zq_var matches 1 if score #t_full zq_var matches 0 run tellraw @a {text:"  完整桥：关闭",color:"gray"}
+execute if score #o_bridge zq_var matches 1 if score #t_bed zq_var matches 1.. run tellraw @a [{text:"  基岩桥：开局后 ",color:"gray"},{score:{name:"#t_bed",objective:"zq_var"},color:"aqua"},{text:"s",color:"gray"}]
+execute if score #o_bridge zq_var matches 1 if score #t_bed zq_var matches 0 run tellraw @a {text:"  基岩桥：关闭",color:"gray"}
+execute if score #o_bridge zq_var matches 2 run tellraw @a [{text:"桥：",color:"gray"},{text:"开局就有完整桥（可破坏）",color:"white"}]
+execute if score #o_pull zq_var matches 1 run tellraw @a [{text:"两岛靠近：",color:"gray"},{text:"开",color:"green",bold:true},{text:"  从 ",color:"gray"},{score:{name:"#t_ps",objective:"zq_var"},color:"aqua"},{text:"s 起每 ",color:"gray"},{score:{name:"#t_pi",objective:"zq_var"},color:"aqua"},{text:"s 一次",color:"gray"}]
+execute if score #o_pull zq_var matches 0 run tellraw @a [{text:"两岛靠近：",color:"gray"},{text:"关",color:"red",bold:true}]
+execute if score #o_shop zq_var matches 1 run tellraw @a [{text:"商店：",color:"gray"},{text:"开",color:"green",bold:true},{text:"",color:"gray"}]
+execute if score #o_shop zq_var matches 0 run tellraw @a [{text:"商店：",color:"gray"},{text:"关",color:"red",bold:true}]
+execute if score #o_poison zq_var matches 1 run tellraw @a [{text:"毒墙：",color:"gray"},{text:"开",color:"green",bold:true},{text:"  ",color:"gray"},{score:{name:"#t_xs",objective:"zq_var"},color:"aqua"},{text:"s 开始，",color:"gray"},{score:{name:"#t_xd",objective:"zq_var"},color:"aqua"},{text:"s 收拢到中间 3 格",color:"gray"}]
+execute if score #o_poison zq_var matches 0 run tellraw @a [{text:"毒墙：",color:"gray"},{text:"关",color:"red",bold:true}]
+execute if score #o_sudden zq_var matches 1 run tellraw @a [{text:"死斗：",color:"gray"},{text:"开",color:"green",bold:true},{text:"  ",color:"gray"},{score:{name:"#t_sd",objective:"zq_var"},color:"aqua"},{text:"s 起死亡不复活",color:"gray"}]
+execute if score #o_sudden zq_var matches 0 run tellraw @a [{text:"死斗：",color:"gray"},{text:"关",color:"red",bold:true}]
+execute if score #o_resp zq_var matches 1 run tellraw @a [{text:"递增复活：",color:"gray"},{text:"开",color:"green",bold:true},{text:"",color:"gray"}]
+execute if score #o_resp zq_var matches 0 run tellraw @a [{text:"递增复活：",color:"gray"},{text:"关",color:"red",bold:true}]
+execute if score #o_win zq_var matches 0 run tellraw @a [{text:"获胜：",color:"gray"},{text:"带回对方旗帜即可",color:"white"}]
+execute if score #o_win zq_var matches 1 run tellraw @a [{text:"获胜：",color:"gray"},{text:"自家旗在家时带回对方旗帜",color:"white"}]

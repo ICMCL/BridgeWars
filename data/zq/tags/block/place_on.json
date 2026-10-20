@@ -1,0 +1,14 @@
+{
+ "values": [
+  "#zq:breakable",
+  "minecraft:smooth_stone",
+  "minecraft:stone",
+  "minecraft:andesite",
+  "minecraft:crimson_planks",
+  "minecraft:warped_planks",
+  "minecraft:red_glazed_terracotta",
+  "minecraft:blue_glazed_terracotta",
+  "minecraft:gold_block",
+  "minecraft:bedrock"
+ ]
+}

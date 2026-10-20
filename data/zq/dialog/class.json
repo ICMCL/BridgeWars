@@ -1,0 +1,78 @@
+{
+ "type": "minecraft:multi_action",
+ "title": {
+  "text": "选择职业",
+  "color": "yellow"
+ },
+ "body": {
+  "type": "minecraft:plain_message",
+  "contents": {
+   "text": "之后回自家基地右键商人可以随时再换，商店买的东西保留。",
+   "color": "gray"
+  },
+  "width": 300
+ },
+ "columns": 2,
+ "pause": false,
+ "actions": [
+  {
+   "label": {
+    "text": "近战",
+    "color": "red"
+   },
+   "width": 150,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_pick set 1"
+   },
+   "tooltip": {
+    "text": "铁剑(锋利I) + 盾牌 + 铁胸甲 + 铁镐"
+   }
+  },
+  {
+   "label": {
+    "text": "远程",
+    "color": "aqua"
+   },
+   "width": 150,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_pick set 2"
+   },
+   "tooltip": {
+    "text": "长弓(力量II·无限箭) + 冲击弓(击退I) + 快弩(快速装填I) + 铁镐，无近战武器；冲击弓和快弩要耗箭，每 3 秒补 1 支（上限 8）"
+   }
+  },
+  {
+   "label": {
+    "text": "混合",
+    "color": "green"
+   },
+   "width": 150,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_pick set 3"
+   },
+   "tooltip": {
+    "text": "石剑 + 普通弓 + 锁链胸甲 + 铁镐，什么都有但都一般"
+   }
+  },
+  {
+   "label": {
+    "text": "建造者",
+    "color": "light_purple"
+   },
+   "width": 150,
+   "action": {
+    "type": "run_command",
+    "command": "trigger zq_pick set 4"
+   },
+   "tooltip": {
+    "text": "建造者之镐(低档方块挖得飞快，几乎无攻击力)，混凝土+陶瓦各自动补到32，石砖每10秒补1，没有武器"
+   }
+  }
+ ],
+ "exit_action": {
+  "label": "保持当前职业"
+ }
+}
