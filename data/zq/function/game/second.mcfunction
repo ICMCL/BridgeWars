@@ -10,9 +10,11 @@ scoreboard players operation #m zq_var = #sec zq_var
 scoreboard players operation #m zq_var %= #10 zq_const
 execute if score #m zq_var matches 0 as @a[tag=zq_ingame,tag=!zq_carry,gamemode=adventure,scores={zq_cls=4}] run function zq:kit/refill {m:15,clr:'stone_bricks',it:'stone_bricks[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
 execute as @a[tag=zq_ingame,gamemode=adventure] run function zq:player/fx
-# 远程：每 3 秒补 1 支箭
+# 箭矢补给：远程每 3 秒、混合每 5 秒补 1 支
 scoreboard players operation #m3 zq_var = #sec zq_var
 scoreboard players operation #m3 zq_var %= #3 zq_const
+scoreboard players operation #m5 zq_var = #sec zq_var
+scoreboard players operation #m5 zq_var %= #5 zq_const
 execute as @a[tag=zq_ingame,gamemode=adventure] run function zq:kit/refill_slow
 
 execute if score #o_bridge zq_var matches 1 if score #t_gap zq_var matches 1.. if score #sec zq_var = #t_gap zq_var run function zq:time/event {fn:"map/bridge_gap",msg:"间断桥出现了",c:"yellow"}
