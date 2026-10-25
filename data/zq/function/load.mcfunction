@@ -54,6 +54,10 @@ execute unless score #i_sd zq_var matches 0..4 run scoreboard players set #i_sd 
 function zq:cfg/calc
 execute unless score #running zq_var matches 0.. run scoreboard players set #running zq_var 0
 
+# 大厅两侧的预览岛兼作保护模板，更新时也要加载；等区块就绪后迁移旧模板
+execute in minecraft:overworld run forceload add -48 -16 47 15
+schedule function zq:map/migrate_templates 40t replace
+
 team add red {text:"红队",color:"red"}
 team add blue {text:"蓝队",color:"blue"}
 team modify red color red
@@ -65,6 +69,9 @@ team modify blue prefix {text:"[蓝] ",color:"blue"}
 data modify storage zq:t red set value {team:'red',name:'红队',color:'red',c:16711680,enemy:'blue',ename:'蓝队',wi:'red_concrete[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]',ti:'red_terracotta[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
 data modify storage zq:t blue set value {team:'blue',name:'蓝队',color:'blue',c:3949738,enemy:'red',ename:'红队',wi:'blue_concrete[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]',ti:'blue_terracotta[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
 function zq:cfg/templates
+# 更新旧版商店：移除村民和挡住箱子的交互实体，现有箱子由游戏 tick 归位
+execute in zq:arena run kill @e[type=villager,tag=zq_npc]
+execute in zq:arena run kill @e[type=interaction,tag=zq_shop]
 scoreboard players display name r_coin zq_side {text:"红队金币",color:"red"}
 scoreboard players display name b_coin zq_side {text:"蓝队金币",color:"blue"}
 scoreboard players display name time zq_side {text:"已进行(秒)",color:"gray"}

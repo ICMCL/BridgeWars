@@ -5,6 +5,9 @@ execute if score #running zq_var matches 1 unless score #sudden zq_var matches 1
 execute if score #running zq_var matches 1 unless score #sudden zq_var matches 1 as @a[tag=!zq_ingame,team=blue,gamemode=adventure,x=3,y=151,z=-1,dx=1,dy=0,dz=2] run function zq:player/enter
 execute if block -2 151 -5 stone_button[powered=true] run function zq:lobby/button
 execute as @e[type=interaction,tag=zq_cfgnpc] if data entity @s interaction run function zq:cfg/npc
+scoreboard players operation #pv4 zq_var = #gt zq_var
+scoreboard players operation #pv4 zq_var %= #4 zq_const
+execute if score #pv4 zq_var matches 0 if score #o_poison zq_var matches 1 if entity @a[x=-6,y=150,z=-6,dx=11,dy=6,dz=12] run function zq:lobby/preview_poison
 execute if score #g20 zq_var matches 0 run effect give @a[tag=!zq_ingame] saturation infinite 0 true
 execute if score #g20 zq_var matches 0 run effect give @a[tag=!zq_ingame] resistance infinite 4 true
 execute if score #g20 zq_var matches 0 run effect give @a[tag=!zq_ingame] regeneration infinite 4 true

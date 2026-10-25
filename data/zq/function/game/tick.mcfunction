@@ -15,9 +15,8 @@ execute if score #m4 zq_var matches 0 as @a[tag=zq_ingame,gamemode=adventure] at
 execute as @e[type=tnt,tag=zq_bomb] at @s if data entity @s {fuse:1s} run function zq:skill/bomb_blast
 function zq:map/protect
 function zq:flag/tick
-execute as @e[type=interaction,tag=zq_shop] if data entity @s interaction run function zq:shop/npc
-execute as @e[type=chest_minecart,tag=zq_store_red] at @e[type=marker,tag=zq_flag_red,limit=1] run tp @s ~-2 ~ ~2
-execute as @e[type=chest_minecart,tag=zq_store_blue] at @e[type=marker,tag=zq_flag_blue,limit=1] run tp @s ~2 ~ ~2
+execute as @e[type=chest_minecart,tag=zq_store_red] at @e[type=marker,tag=zq_flag_red,limit=1] run tp @s ~-2 ~ ~
+execute as @e[type=chest_minecart,tag=zq_store_blue] at @e[type=marker,tag=zq_flag_blue,limit=1] run tp @s ~2 ~ ~
 execute as @e[type=chest_minecart,tag=zq_store_red] run function zq:shop/stock {team:"red"}
 execute as @e[type=chest_minecart,tag=zq_store_blue] run function zq:shop/stock {team:"blue"}
 execute as @e[type=arrow,tag=!zq_chk] run function zq:arrow/check
@@ -35,6 +34,6 @@ scoreboard players operation b_coin zq_side = #blue zq_coin
 execute if score #o_shop zq_var matches 0 run scoreboard players reset r_coin zq_side
 execute if score #o_shop zq_var matches 0 run scoreboard players reset b_coin zq_side
 scoreboard players operation time zq_side = #sec zq_var
-execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1 run title @a[team=red,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#red",objective:"zq_coin"},color:"yellow"},{text:"   回基地右键商人旁的箱子购买",color:"gray"}]
-execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1 run title @a[team=blue,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#blue",objective:"zq_coin"},color:"yellow"},{text:"   回基地右键商人旁的箱子购买",color:"gray"}]
+execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1 run title @a[team=red,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#red",objective:"zq_coin"},color:"yellow"},{text:"   回基地右键旗帜后面的箱子购买 / 换职业",color:"gray"}]
+execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1 run title @a[team=blue,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#blue",objective:"zq_coin"},color:"yellow"},{text:"   回基地右键旗帜后面的箱子购买 / 换职业",color:"gray"}]
 execute if score #m20 zq_var matches 0 run function zq:game/second

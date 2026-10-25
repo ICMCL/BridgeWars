@@ -7,7 +7,7 @@
  "body": {
   "type": "minecraft:plain_message",
   "contents": {
-   "text": "之后回自家基地右键商人可以随时再换，商店买的东西保留。",
+   "text": "之后回自家基地右键旗帜后面的箱子，取出免费职业图标即可再换，商店买的东西保留。",
    "color": "gray"
   },
   "width": 300

@@ -17,7 +17,7 @@ gamerule tnt_explodes true
 difficulty easy
 time set 6000
 weather clear
-execute in minecraft:overworld run forceload add -16 -16 15 15
+execute in minecraft:overworld run forceload add -48 -16 47 15
 execute in zq:arena run forceload add -80 -48 79 47
 tellraw @a {text:"[战桥] 正在加载区块，2 秒后生成大厅和战场……",color:"gold"}
 schedule function zq:internal/install_build 40t

@@ -28,4 +28,5 @@ scoreboard players operation #i_gap zq_var %= #10 zq_const
 scoreboard players operation #n zq_var /= #10 zq_const
 function zq:cfg/calc
 tellraw @a [{selector:"@s"},{text:" 修改了阶段时间",color:"yellow"}]
+function zq:lobby/preview
 function zq:cfg/summary

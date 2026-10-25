@@ -9,7 +9,7 @@
  "body": {
   "type": "minecraft:plain_message",
   "contents": {
-   "text": "设置对下一局生效；游戏进行中不能修改。",
+   "text": "设置对下一局生效；游戏进行中不能修改。保存后大厅预览同步刷新：毒墙显示最终范围，其余显示开局状态。",
    "color": "gray"
   },
   "width": 300

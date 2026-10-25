@@ -8,3 +8,4 @@ scoreboard players set #i_xs zq_var 2
 scoreboard players set #i_xd zq_var 2
 scoreboard players set #i_sd zq_var 2
 function zq:cfg/calc
+function zq:lobby/preview

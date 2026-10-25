@@ -24,4 +24,5 @@ scoreboard players operation #o_bridge zq_var = #n zq_var
 scoreboard players operation #o_bridge zq_var %= #10 zq_const
 scoreboard players operation #n zq_var /= #10 zq_const
 tellraw @a [{selector:"@s"},{text:" 修改了规则设置",color:"yellow"}]
+function zq:lobby/preview
 function zq:cfg/summary
