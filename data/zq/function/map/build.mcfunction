@@ -17,7 +17,7 @@ setblock -43 100 0 gold_block
 setblock -43 101 0 red_banner
 summon marker -42.5 101 0.5 {Tags:["zq_flag_red","zq_m"]}
 summon marker -34.5 101 0.5 {Tags:["zq_spawn_red","zq_m"],Rotation:[-90f,0f]}
-function zq:map/npc {x:-44.5,r:"-90",t:"red"}
+function zq:map/npc {x:-34.5,r:"-90",t:"red"}
 # 蓝岛
 fill 29 100 -4 45 100 4 smooth_stone
 fill 29 100 -4 45 100 -4 warped_planks
@@ -32,6 +32,6 @@ setblock 42 100 0 gold_block
 setblock 42 101 0 blue_banner
 summon marker 42.5 101 0.5 {Tags:["zq_flag_blue","zq_m"]}
 summon marker 34.5 101 0.5 {Tags:["zq_spawn_blue","zq_m"],Rotation:[90f,0f]}
-function zq:map/npc {x:44.5,r:"90",t:"blue"}
+function zq:map/npc {x:34.5,r:"90",t:"blue"}
 # 只保存原生岛体，保护恢复不会覆盖玩家搭建的方块或带回已拿走的旗帜
 function zq:map/templates {y0:97,y1:100}

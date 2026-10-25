@@ -27,6 +27,8 @@ scoreboard objectives add zq_death deathCount
 scoreboard objectives add zq_kill playerKillCount
 scoreboard objectives add zq_use minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add zq_left minecraft.custom:minecraft.leave_game
+scoreboard objectives add zq_mred minecraft.mined:minecraft.red_banner
+scoreboard objectives add zq_mblue minecraft.mined:minecraft.blue_banner
 scoreboard objectives add zq_side dummy {text:"⚔ 战桥 ⚔",color:"gold",bold:true}
 scoreboard players set #2 zq_const 2
 scoreboard players set #3 zq_const 3

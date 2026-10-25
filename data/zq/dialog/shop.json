@@ -45,7 +45,7 @@
   },
   {
    "label": {
-    "text": "烈焰弹  [4金币]",
+    "text": "烈焰弹  [2金币]",
     "color": "white"
    },
    "width": 130,
@@ -129,7 +129,7 @@
   },
   {
    "label": {
-    "text": "石砖 ×16  [3金币]",
+    "text": "石砖 ×16  [2金币]",
     "color": "white"
    },
    "width": 130,
@@ -138,12 +138,12 @@
     "command": "trigger zq_buy set 10"
    },
    "tooltip": {
-    "text": "铁镐挖 1.5 秒；消除箭消耗 3"
+    "text": "石镐挖 1.5 秒；消除箭消耗 3"
    }
   },
   {
    "label": {
-    "text": "末地石 ×16  [6金币]",
+    "text": "末地石 ×16  [4金币]",
     "color": "white"
    },
    "width": 130,
@@ -152,12 +152,12 @@
     "command": "trigger zq_buy set 11"
    },
    "tooltip": {
-    "text": "铁镐挖 3 秒；消除箭消耗 4"
+    "text": "石镐挖 3 秒；消除箭消耗 4"
    }
   },
   {
    "label": {
-    "text": "原木 ×8  [8金币]",
+    "text": "原木 ×8  [6金币]",
     "color": "white"
    },
    "width": 130,

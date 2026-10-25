@@ -2,7 +2,6 @@
 scoreboard players set #endt zq_var 0
 gamerule tnt_explodes true
 function zq:cfg/calc
-execute in zq:arena run function zq:map/build
 data remove storage zq:inv p
 scoreboard players add #gid zq_var 1
 scoreboard players set #t zq_var 0
@@ -28,6 +27,7 @@ scoreboard players set #red zq_up_jmp 0
 scoreboard players set #blue zq_up_jmp 0
 scoreboard players set #red zq_up_rsp 0
 scoreboard players set #blue zq_up_rsp 0
+execute in zq:arena run function zq:map/build
 execute if score #o_bridge zq_var matches 2 in zq:arena run function zq:map/bridge_full
 scoreboard objectives setdisplay sidebar zq_side
 scoreboard players reset * zq_side
