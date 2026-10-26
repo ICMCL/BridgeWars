@@ -8,7 +8,7 @@ execute if entity @s[team=blue] at @s unless entity @e[type=chest_minecart,tag=z
 # 伤害药水
 execute if score #b zq_var matches 1 run function zq:shop/item {p:6,n:1,it:'splash_potion[potion_contents={potion:"minecraft:strong_harming"}]'}
 # 消除方块箭 ×3
-execute if score #b zq_var matches 2 run function zq:shop/item {p:5,n:3,it:'tipped_arrow[potion_contents={custom_color:11141290},item_name={text:"消除方块箭",color:"light_purple"},lore=[{text:"耐久 10，击中后向前钻穿方块",color:"gray",italic:false},{text:"混凝土/玻璃/史莱姆 1 · 陶瓦 2 · 石砖 3 · 末地石 4 · 原木 10",color:"gray",italic:false},{text:"基地和岛屿本体打不穿",color:"gray",italic:false}],custom_data={zq:"erase"}]'}
+execute if score #b zq_var matches 2 run function zq:shop/item {p:5,n:3,it:'tipped_arrow[potion_contents={custom_color:11141290},item_name={text:"消除方块箭",color:"light_purple"},lore=[{text:"耐久 10，击中后向前钻穿方块",color:"gray",italic:false},{text:"混凝土/玻璃/史莱姆 1 · 石砖 3 · 原木 10",color:"gray",italic:false},{text:"基地和岛屿本体打不穿",color:"gray",italic:false}],custom_data={zq:"erase"}]'}
 # 烈焰弹
 execute if score #b zq_var matches 3 run function zq:shop/item {p:2,n:1,it:'carrot_on_a_stick[item_model="minecraft:fire_charge",item_name={text:"烈焰弹（右键发射）",color:"gold"},custom_data={zq:"fireball"}]'}
 # 隐身药水
@@ -21,10 +21,6 @@ execute if score #b zq_var matches 6 run function zq:shop/item {p:6,n:1,it:'tote
 execute if score #b zq_var matches 8 run function zq:shop/item {p:5,n:1,it:'carrot_on_a_stick[item_model="minecraft:glass",item_name={text:"脚下生桥（右键）",color:"aqua"},custom_data={zq:"foot"}]'}
 # 自救平台
 execute if score #b zq_var matches 9 run function zq:shop/item {p:4,n:1,it:'carrot_on_a_stick[item_model="minecraft:slime_block",item_name={text:"自救平台（右键）",color:"green"},custom_data={zq:"plat"}]'}
-# 石砖 ×16
-execute if score #b zq_var matches 10 run function zq:shop/item {p:2,n:16,it:'stone_bricks[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
-# 末地石 ×16
-execute if score #b zq_var matches 11 run function zq:shop/item {p:4,n:16,it:'end_stone[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
 # 原木 ×8
 execute if score #b zq_var matches 12 run function zq:shop/item {p:6,n:8,it:'oak_log[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
 execute if score #b zq_var matches 21 run function zq:shop/up {o:"zq_up_str",max:2,base:15,name:"力量"}

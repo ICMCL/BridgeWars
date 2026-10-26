@@ -5,12 +5,8 @@ scoreboard players operation #m zq_var %= #30 zq_const
 execute if score #m zq_var matches 0 if score #o_shop zq_var matches 1 run scoreboard players add #red zq_coin 1
 execute if score #m zq_var matches 0 if score #o_shop zq_var matches 1 run scoreboard players add #blue zq_coin 1
 execute if score #m zq_var matches 0 as @a[tag=zq_ingame,gamemode=adventure] run function zq:kit/refill {m:7,clr:'cooked_beef',it:'cooked_beef'}
-# 建造者：每 10 秒补 1 个石砖（最多 16）
-scoreboard players operation #m zq_var = #sec zq_var
-scoreboard players operation #m zq_var %= #10 zq_const
-execute if score #m zq_var matches 0 as @a[tag=zq_ingame,tag=!zq_carry,gamemode=adventure,scores={zq_cls=4}] run function zq:kit/refill {m:15,clr:'stone_bricks',it:'stone_bricks[can_place_on={blocks:"#zq:place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]}]'}
 execute as @a[tag=zq_ingame,gamemode=adventure] run function zq:player/fx
-# 箭矢补给：远程每 3 秒、混合每 5 秒补 1 支
+# 慢速补给：远程每 3 秒、混合每 5 秒补 1 支箭；建造者每 3 秒补 1 个石砖（最多 16）
 scoreboard players operation #m3 zq_var = #sec zq_var
 scoreboard players operation #m3 zq_var %= #3 zq_const
 scoreboard players operation #m5 zq_var = #sec zq_var

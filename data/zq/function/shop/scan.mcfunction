@@ -6,8 +6,6 @@ $function zq:shop/consume {team:"$(team)",id:5}
 $function zq:shop/consume {team:"$(team)",id:6}
 $function zq:shop/consume {team:"$(team)",id:8}
 $function zq:shop/consume {team:"$(team)",id:9}
-$function zq:shop/consume {team:"$(team)",id:10}
-$function zq:shop/consume {team:"$(team)",id:11}
 $function zq:shop/consume {team:"$(team)",id:12}
 $function zq:shop/consume {team:"$(team)",id:21}
 $function zq:shop/consume {team:"$(team)",id:22}

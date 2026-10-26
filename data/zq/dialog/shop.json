@@ -40,7 +40,7 @@
     "command": "trigger zq_buy set 2"
    },
    "tooltip": {
-    "text": "耐久10：混凝土1 陶瓦2 石砖3 末地石4 原木10。放副手或排在普通箭前面才会先射出"
+    "text": "耐久10：混凝土/玻璃/史莱姆1 石砖3 原木10。放副手或排在普通箭前面才会先射出"
    }
   },
   {
@@ -125,34 +125,6 @@
    },
    "tooltip": {
     "text": "右键在脚下生成 5×5 史莱姆平台，10 秒后消失"
-   }
-  },
-  {
-   "label": {
-    "text": "石砖 ×16  [2金币]",
-    "color": "white"
-   },
-   "width": 130,
-   "action": {
-    "type": "run_command",
-    "command": "trigger zq_buy set 10"
-   },
-   "tooltip": {
-    "text": "石镐挖 1.5 秒；消除箭消耗 3"
-   }
-  },
-  {
-   "label": {
-    "text": "末地石 ×16  [4金币]",
-    "color": "white"
-   },
-   "width": 130,
-   "action": {
-    "type": "run_command",
-    "command": "trigger zq_buy set 11"
-   },
-   "tooltip": {
-    "text": "石镐挖 3 秒；消除箭消耗 4"
    }
   },
   {

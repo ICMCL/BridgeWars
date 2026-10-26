@@ -74,11 +74,19 @@ function zq:cfg/templates
 # 更新旧版商店：移除村民和挡住箱子的交互实体，现有箱子由游戏 tick 归位
 execute in zq:arena run kill @e[type=villager,tag=zq_npc]
 execute in zq:arena run kill @e[type=interaction,tag=zq_shop]
-# 刷新护甲调整前的职业图标，商店 tick 会补回新描述
+# 刷新旧版商店方块和职业图标，商店 tick 会补回新图标
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_red] if items entity @s container.9 *[custom_data~{zq_shop:1,buy:10,team:"red"}] run item replace entity @s container.9 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_blue] if items entity @s container.9 *[custom_data~{zq_shop:1,buy:10,team:"blue"}] run item replace entity @s container.9 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_red] if items entity @s container.10 *[custom_data~{zq_shop:1,buy:11,team:"red"}] run item replace entity @s container.10 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_blue] if items entity @s container.10 *[custom_data~{zq_shop:1,buy:11,team:"blue"}] run item replace entity @s container.10 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_red] if items entity @s container.11 *[custom_data~{zq_shop:1,buy:12,team:"red"}] run item replace entity @s container.11 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_blue] if items entity @s container.11 *[custom_data~{zq_shop:1,buy:12,team:"blue"}] run item replace entity @s container.11 with air
 execute in zq:arena as @e[type=chest_minecart,tag=zq_store_red] if items entity @s container.19 *[custom_data~{zq_shop:1,buy:31,team:"red"}] run item replace entity @s container.19 with air
 execute in zq:arena as @e[type=chest_minecart,tag=zq_store_blue] if items entity @s container.19 *[custom_data~{zq_shop:1,buy:31,team:"blue"}] run item replace entity @s container.19 with air
 execute in zq:arena as @e[type=chest_minecart,tag=zq_store_red] if items entity @s container.21 *[custom_data~{zq_shop:1,buy:33,team:"red"}] run item replace entity @s container.21 with air
 execute in zq:arena as @e[type=chest_minecart,tag=zq_store_blue] if items entity @s container.21 *[custom_data~{zq_shop:1,buy:33,team:"blue"}] run item replace entity @s container.21 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_red] if items entity @s container.22 *[custom_data~{zq_shop:1,buy:34,team:"red"}] run item replace entity @s container.22 with air
+execute in zq:arena as @e[type=chest_minecart,tag=zq_store_blue] if items entity @s container.22 *[custom_data~{zq_shop:1,buy:34,team:"blue"}] run item replace entity @s container.22 with air
 scoreboard players display name r_coin zq_side {text:"红队金币",color:"red"}
 scoreboard players display name b_coin zq_side {text:"蓝队金币",color:"blue"}
 scoreboard players display name time zq_side {text:"已进行(秒)",color:"gray"}

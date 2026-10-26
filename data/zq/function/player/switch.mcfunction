@@ -5,6 +5,7 @@ clear @s red_concrete
 clear @s blue_concrete
 clear @s red_terracotta
 clear @s blue_terracotta
+clear @s stone_bricks
 execute if entity @s[team=red] run function zq:kit/give with storage zq:t red
 execute if entity @s[team=blue] run function zq:kit/give with storage zq:t blue
 execute at @s run playsound minecraft:item.armor.equip_iron master @s
