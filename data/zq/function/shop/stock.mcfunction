@@ -16,7 +16,7 @@ $function zq:shop/stock_up {team:"$(team)",slot:14,id:22,model:"iron_chestplate"
 $function zq:shop/stock_up {team:"$(team)",slot:15,id:23,model:"sugar",name:"队伍速度升级",o:"zq_up_spd",max:2,base:10}
 $function zq:shop/stock_up {team:"$(team)",slot:16,id:24,model:"rabbit_foot",name:"队伍跳跃升级",o:"zq_up_jmp",max:2,base:6}
 $function zq:shop/stock_up {team:"$(team)",slot:17,id:25,model:"clock",name:"队伍复活 -1 秒",o:"zq_up_rsp",max:5,base:5}
-$function zq:shop/icon {team:"$(team)",slot:19,id:31,model:"iron_sword",name:"换职业：近战（免费）",desc:"铁剑、盾牌、队伍色皮革帽、铁胸甲"}
+$function zq:shop/icon {team:"$(team)",slot:19,id:31,model:"iron_sword",name:"换职业：近战（免费）",desc:"铁剑、盾牌、队伍色皮革帽、铁胸甲（保护I）、铁护腿、铁靴"}
 $function zq:shop/icon {team:"$(team)",slot:20,id:32,model:"bow",name:"换职业：远程（免费）",desc:"冲击弓（击退I·无限）、快弩，只穿队伍色皮革帽"}
-$function zq:shop/icon {team:"$(team)",slot:21,id:33,model:"stone_sword",name:"换职业：混合（免费）",desc:"石剑、普通弓、队伍色皮革帽、锁链胸甲，箭矢上限5"}
+$function zq:shop/icon {team:"$(team)",slot:21,id:33,model:"stone_sword",name:"换职业：混合（免费）",desc:"石剑、普通弓、队伍色皮革帽、锁链胸甲、锁链护腿、锁链靴，箭矢上限5"}
 $function zq:shop/icon {team:"$(team)",slot:22,id:34,model:"iron_pickaxe",name:"换职业：建造者（免费）",desc:"建造者镐、队伍色皮革套装，方块补充"}
