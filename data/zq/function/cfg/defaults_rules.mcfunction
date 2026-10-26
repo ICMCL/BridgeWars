@@ -6,3 +6,4 @@ scoreboard players set #o_poison zq_var 0
 scoreboard players set #o_sudden zq_var 0
 scoreboard players set #o_resp zq_var 1
 scoreboard players set #o_win zq_var 0
+scoreboard players set #o_cap zq_var 0

@@ -1,4 +1,3 @@
-execute unless entity @s[tag=zq_ingame,tag=!zq_carry] run return run function zq:lobby/pick_deny
 scoreboard players operation @s zq_cls = @s zq_pick
 scoreboard players set @s zq_pick 0
 execute unless score @s zq_cls matches 1..4 run scoreboard players set @s zq_cls 1

@@ -7,13 +7,9 @@ execute as @a[scores={zq_left=1..}] run function zq:lobby/rejoin
 execute as @a[tag=!zq_seen] run function zq:lobby/welcome
 
 # 触发器（对话框按钮）
-scoreboard players enable @a zq_pick
-scoreboard players enable @a zq_buy
 scoreboard players enable @a[tag=!zq_ingame] zq_cfg
 scoreboard players enable @a[tag=!zq_ingame] zq_set
 scoreboard players enable @a[tag=!zq_ingame] zq_time
-execute as @a[scores={zq_pick=1..}] run function zq:lobby/pick
-execute as @a[scores={zq_buy=1..}] at @s run function zq:shop/buy
 execute as @a[scores={zq_cfg=1..}] run function zq:cfg/open
 execute as @a[scores={zq_set=1..}] run function zq:cfg/apply_rules
 execute as @a[scores={zq_time=1..}] run function zq:cfg/apply_times

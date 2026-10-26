@@ -36,5 +36,6 @@ execute as @a[team=!] run function zq:player/enter
 execute as @a[team=] run function zq:player/watch
 title @a times 5 40 10
 title @a title {text:"战桥 开始！",color:"gold",bold:true}
-title @a subtitle {text:"夺取敌方旗帜，带回自家旗台",color:"yellow"}
+execute if score #o_cap zq_var matches 0 run title @a subtitle {text:"夺取敌方旗帜，带回自家旗台",color:"yellow"}
+execute if score #o_cap zq_var matches 1 run title @a subtitle {text:"夺取敌方旗帜，带回自家出生点",color:"yellow"}
 function zq:cfg/summary

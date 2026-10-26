@@ -34,6 +34,6 @@ scoreboard players operation b_coin zq_side = #blue zq_coin
 execute if score #o_shop zq_var matches 0 run scoreboard players reset r_coin zq_side
 execute if score #o_shop zq_var matches 0 run scoreboard players reset b_coin zq_side
 scoreboard players operation time zq_side = #sec zq_var
-execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1 run title @a[team=red,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#red",objective:"zq_coin"},color:"yellow"},{text:"   右键出生点正中间的箱子购买 / 换职业",color:"gray"}]
-execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1 run title @a[team=blue,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#blue",objective:"zq_coin"},color:"yellow"},{text:"   右键出生点正中间的箱子购买 / 换职业",color:"gray"}]
+execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1.. run title @a[team=red,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#red",objective:"zq_coin"},color:"yellow"},{text:"   右键出生点正中间的箱子购买 / 换职业",color:"gray"}]
+execute if score #m20 zq_var matches 0 if score #o_shop zq_var matches 1.. run title @a[team=blue,gamemode=adventure] actionbar [{text:"队伍金币 ",color:"gold"},{score:{name:"#blue",objective:"zq_coin"},color:"yellow"},{text:"   右键出生点正中间的箱子购买 / 换职业",color:"gray"}]
 execute if score #m20 zq_var matches 0 run function zq:game/second

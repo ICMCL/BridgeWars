@@ -2,6 +2,7 @@ scoreboard players reset @s zq_death
 scoreboard players reset @s zq_foot
 execute unless entity @s[tag=zq_ingame] run return 0
 execute if entity @s[tag=zq_carry] run function zq:flag/drop
+execute if score #o_shop zq_var matches 2 run function zq:player/drop_shop
 scoreboard players add @s zq_dc 1
 execute if score #sudden zq_var matches 1 run return run function zq:player/out
 # 复活时间（秒）

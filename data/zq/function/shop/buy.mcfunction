@@ -1,7 +1,7 @@
 scoreboard players operation #b zq_var = @s zq_buy
 scoreboard players set @s zq_buy 0
 execute unless entity @s[tag=zq_ingame,tag=!zq_carry,gamemode=adventure] run return run tellraw @s {text:"只有参战且未扛旗的玩家能购买。",color:"red"}
-execute unless score #o_shop zq_var matches 1 run return run tellraw @s {text:"本局商店已关闭。",color:"red"}
+execute unless score #o_shop zq_var matches 1.. run return run tellraw @s {text:"本局商店已关闭。",color:"red"}
 execute unless entity @s[team=red] unless entity @s[team=blue] run return run tellraw @s {text:"请先加入队伍。",color:"red"}
 execute if entity @s[team=red] at @s unless entity @e[type=chest_minecart,tag=zq_store_red,distance=..5] run return run tellraw @s {text:"请在自家箱子商店 5 格内购买。",color:"red"}
 execute if entity @s[team=blue] at @s unless entity @e[type=chest_minecart,tag=zq_store_blue,distance=..5] run return run tellraw @s {text:"请在自家箱子商店 5 格内购买。",color:"red"}

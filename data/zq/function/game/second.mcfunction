@@ -2,8 +2,8 @@ scoreboard players add #sec zq_var 1
 # 每 30 秒：每队 +1 金币；每人补 1 块牛肉排（最多 8）
 scoreboard players operation #m zq_var = #sec zq_var
 scoreboard players operation #m zq_var %= #30 zq_const
-execute if score #m zq_var matches 0 if score #o_shop zq_var matches 1 run scoreboard players add #red zq_coin 1
-execute if score #m zq_var matches 0 if score #o_shop zq_var matches 1 run scoreboard players add #blue zq_coin 1
+execute if score #m zq_var matches 0 if score #o_shop zq_var matches 1.. run scoreboard players add #red zq_coin 1
+execute if score #m zq_var matches 0 if score #o_shop zq_var matches 1.. run scoreboard players add #blue zq_coin 1
 execute if score #m zq_var matches 0 as @a[tag=zq_ingame,gamemode=adventure] run function zq:kit/refill {m:7,clr:'cooked_beef',it:'cooked_beef'}
 execute as @a[tag=zq_ingame,gamemode=adventure] run function zq:player/fx
 # 慢速补给：远程每 3 秒、混合每 5 秒补 1 支箭；建造者每 3 秒补 1 个石砖（最多 16）

@@ -1,7 +1,10 @@
 scoreboard players operation #n zq_var = @s zq_set
 scoreboard players set @s zq_set 0
 execute if score #running zq_var matches 1 run return run tellraw @s {text:"游戏进行中不能修改设置",color:"red"}
-execute unless score #n zq_var matches 10000000..12111111 run return 0
+execute unless score #n zq_var matches 100000000..121211111 run return 0
+scoreboard players operation #o_cap zq_var = #n zq_var
+scoreboard players operation #o_cap zq_var %= #10 zq_const
+scoreboard players operation #n zq_var /= #10 zq_const
 scoreboard players operation #o_win zq_var = #n zq_var
 scoreboard players operation #o_win zq_var %= #10 zq_const
 scoreboard players operation #n zq_var /= #10 zq_const
