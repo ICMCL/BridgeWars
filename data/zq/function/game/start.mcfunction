@@ -29,6 +29,7 @@ scoreboard players set #red zq_up_rsp 0
 scoreboard players set #blue zq_up_rsp 0
 execute in zq:arena run function zq:map/build
 execute if score #o_bridge zq_var matches 2 in zq:arena run function zq:map/bridge_full
+execute if score #o_bridge zq_var matches 3 in zq:arena run function zq:map/bridge_thick
 scoreboard objectives setdisplay sidebar zq_side
 scoreboard players reset * zq_side
 scoreboard players set #running zq_var 1

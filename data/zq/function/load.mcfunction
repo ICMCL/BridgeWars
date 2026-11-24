@@ -44,7 +44,7 @@ scoreboard players set #-1 zq_const -1
 data modify storage zq:cfg tab set value {gap:[60, 120, 180, 300, 480, 0],full:[120, 240, 360, 600, 900, 0],bed:[240, 360, 600, 900, 1800, 0],ps:[30, 60, 120, 300, 600],pi:[10, 20, 30, 60, 120],xs:[180, 300, 600, 900, 1500],xd:[60, 120, 180, 300, 600],sd:[300, 480, 720, 1200, 1800]}
 # 两岛靠近：整块场地切成 14 片分帧搬运，核心层（岛面所在）排在最前
 data modify storage zq:cfg pslice set value [{y0:94,y1:112,z0:-12,z1:11},{y0:94,y1:112,z0:-45,z1:-13},{y0:94,y1:112,z0:12,z1:44},{y0:86,y1:93,z0:-45,z1:44},{y0:78,y1:85,z0:-45,z1:44},{y0:70,y1:77,z0:-45,z1:44},{y0:62,y1:69,z0:-45,z1:44},{y0:56,y1:61,z0:-45,z1:44},{y0:113,y1:120,z0:-45,z1:44},{y0:121,y1:128,z0:-45,z1:44},{y0:129,y1:136,z0:-45,z1:44},{y0:137,y1:144,z0:-45,z1:44},{y0:145,y1:150,z0:-45,z1:44},{y0:151,y1:155,z0:-45,z1:44}]
-execute unless score #o_bridge zq_var matches 0..2 run function zq:cfg/defaults_rules
+execute unless score #o_bridge zq_var matches 0..3 run function zq:cfg/defaults_rules
 execute unless score #o_cap zq_var matches 0..1 run scoreboard players set #o_cap zq_var 0
 execute unless score #i_gap zq_var matches 0..5 run scoreboard players set #i_gap zq_var 2
 execute unless score #i_full zq_var matches 0..5 run scoreboard players set #i_full zq_var 2
@@ -75,4 +75,4 @@ execute in zq:arena as @e[type=chest_minecart,tag=zq_m] run data modify entity @
 scoreboard players display name r_coin zq_side {text:"红队金币",color:"red"}
 scoreboard players display name b_coin zq_side {text:"蓝队金币",color:"blue"}
 scoreboard players display name time zq_side {text:"已进行(秒)",color:"gray"}
-tellraw @a [{text:"[战桥] ",color:"gold"},{text:"数据包已加载。第一次使用请输入 ",color:"white"},{text:"/function zq:install",color:"aqua",click_event:{action:"suggest_command",command:"/function zq:install"}}]
+scoreboard players set #lobby_synced zq_var 0

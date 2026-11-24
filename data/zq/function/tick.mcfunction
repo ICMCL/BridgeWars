@@ -1,3 +1,5 @@
+execute unless score #lobby_synced zq_var matches 1 in minecraft:overworld if loaded 0 150 0 run function zq:internal/world_boot
+
 scoreboard players add #gt zq_var 1
 scoreboard players operation #g20 zq_var = #gt zq_var
 scoreboard players operation #g20 zq_var %= #20 zq_const

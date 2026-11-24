@@ -8,6 +8,7 @@ execute if score #o_bridge zq_var matches 1 if score #t_full zq_var matches 0 ru
 execute if score #o_bridge zq_var matches 1 if score #t_bed zq_var matches 1.. run tellraw @a [{text:"  基岩桥：开局后 ",color:"gray"},{score:{name:"#t_bed",objective:"zq_var"},color:"aqua"},{text:"s",color:"gray"}]
 execute if score #o_bridge zq_var matches 1 if score #t_bed zq_var matches 0 run tellraw @a {text:"  基岩桥：关闭",color:"gray"}
 execute if score #o_bridge zq_var matches 2 run tellraw @a [{text:"桥：",color:"gray"},{text:"开局就有完整桥（可破坏）",color:"white"}]
+execute if score #o_bridge zq_var matches 3 run tellraw @a [{text:"桥：",color:"gray"},{text:"开局就有厚高桥（灰色混凝土，宽 1 格、厚 6 格，可破坏）",color:"white"}]
 execute if score #o_pull zq_var matches 1 run tellraw @a [{text:"两岛靠近：",color:"gray"},{text:"开",color:"green",bold:true},{text:"  从 ",color:"gray"},{score:{name:"#t_ps",objective:"zq_var"},color:"aqua"},{text:"s 起每 ",color:"gray"},{score:{name:"#t_pi",objective:"zq_var"},color:"aqua"},{text:"s 一次",color:"gray"}]
 execute if score #o_pull zq_var matches 0 run tellraw @a [{text:"两岛靠近：",color:"gray"},{text:"关",color:"red",bold:true}]
 execute if score #o_shop zq_var matches 1 run tellraw @a [{text:"商店：",color:"gray"},{text:"开",color:"green",bold:true},{text:"（死后保留已买道具）",color:"gray"}]

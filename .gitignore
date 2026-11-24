@@ -1,2 +1,11 @@
+/dist/
+/previews/
 *.zip
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
 .vscode/
+/world/players/
+/world/session.lock
+/logs/

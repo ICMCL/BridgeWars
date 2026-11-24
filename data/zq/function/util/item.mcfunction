@@ -1,3 +1,4 @@
+execute on origin if entity @s[gamemode=creative] run return 0
 execute store result score @s zq_tmp run data get entity @s Age
 execute if score @s zq_tmp matches 40.. run return run kill @s
 data modify entity @s PickupDelay set value 0s

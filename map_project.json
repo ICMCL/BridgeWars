@@ -1,0 +1,67 @@
+{
+  "slug": "bridge-wars",
+  "namespace": "zq",
+  "title": "战桥（Bridge Wars）",
+  "description": "双岛虚空搭桥夺旗对抗 × 四职业金币商店 × 阶段桥与移岛毒墙机制（Minecraft Java 26.3）",
+  "biome": "minecraft:the_void",
+  "spawn": {
+    "pos": [-1, 151, 0],
+    "yaw": 180.0,
+    "pitch": 10.0
+  },
+  "build_script": "tools/build_map.py",
+  "preview_shots": [
+    {
+      "file": "preview_overview.png",
+      "cam": [0.0, 178.0, 52.0],
+      "look_at": [-0.5, 142.0, 0.0],
+      "fov": 52.0,
+      "title": "战桥（Bridge Wars）· 双岛对峙与高空大厅全景",
+      "subtitle": "26.3 .mca 原生区块渲染 · 红/蓝 17×9 夺旗浮空岛 · 上方 y=150 选队大厅"
+    },
+    {
+      "file": "preview_islands.png",
+      "cam": [-58.0, 156.0, 22.0],
+      "look_at": [-10.0, 139.5, 0.0],
+      "fov": 48.0,
+      "title": "红蓝双岛侧向纵深视角（含跨岛单格战桥示意）",
+      "subtitle": "绯红/诡异木镶边四层安山岩岛体 · 3×3 釉面陶瓦出生基地 · 岛尾金块旗台"
+    },
+    {
+      "file": "preview_lobby.png",
+      "cam": [-0.5, 156.5, 6.5],
+      "look_at": [-0.5, 151.2, -4.5],
+      "fov": 56.0,
+      "title": "主世界 y=150 玻璃选队大厅",
+      "subtitle": "红/蓝选队区与旁观区 · 绿宝石开始按钮 · 规则与阶段时间讲台"
+    }
+  ],
+  "extra_preview_voxels": [
+    { "pos": [-25, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-24, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-23, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-19, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-18, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-17, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-13, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-12, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-11, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-7, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-6, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-5, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [-1, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [0, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [4, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [5, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [6, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [10, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [11, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [12, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [16, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [17, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [18, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [22, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [23, 140, 0], "block": "minecraft:stone_bricks" },
+    { "pos": [24, 140, 0], "block": "minecraft:stone_bricks" }
+  ]
+}
