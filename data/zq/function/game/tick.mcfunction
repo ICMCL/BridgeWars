@@ -15,10 +15,11 @@ execute if score #m4 zq_var matches 0 as @a[tag=zq_ingame,gamemode=adventure] at
 execute as @e[type=tnt,tag=zq_bomb] at @s if data entity @s {fuse:1s} run function zq:skill/bomb_blast
 function zq:map/protect
 function zq:flag/tick
-execute as @e[type=chest_minecart,tag=zq_store_red] at @e[type=marker,tag=zq_spawn_red,limit=1] run tp @s ~ ~ ~
-execute as @e[type=chest_minecart,tag=zq_store_blue] at @e[type=marker,tag=zq_spawn_blue,limit=1] run tp @s ~ ~ ~
-execute as @e[type=chest_minecart,tag=zq_store_red] run function zq:shop/stock {team:"red"}
-execute as @e[type=chest_minecart,tag=zq_store_blue] run function zq:shop/stock {team:"blue"}
+execute as @e[type=chest_minecart,tag=zq_store_red] at @e[type=marker,tag=zq_spawn_red,limit=1] unless entity @s[distance=..0.05] run tp @s ~ ~ ~
+execute as @e[type=chest_minecart,tag=zq_store_blue] at @e[type=marker,tag=zq_spawn_blue,limit=1] unless entity @s[distance=..0.05] run tp @s ~ ~ ~
+execute as @e[type=chest_minecart,tag=zq_m] run function zq:shop/clean
+execute if score #m4 zq_var matches 0 as @e[type=chest_minecart,tag=zq_store_red] run function zq:shop/stock {team:"red"}
+execute if score #m4 zq_var matches 2 as @e[type=chest_minecart,tag=zq_store_blue] run function zq:shop/stock {team:"blue"}
 execute as @e[type=arrow,tag=!zq_chk] run function zq:arrow/check
 execute as @e[type=arrow,tag=zq_erase] at @s run function zq:arrow/tick
 execute as @a[scores={zq_foot=1..},gamemode=adventure] at @s run function zq:skill/foot_tick

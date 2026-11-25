@@ -76,3 +76,4 @@ scoreboard players display name r_coin zq_side {text:"红队金币",color:"red"}
 scoreboard players display name b_coin zq_side {text:"蓝队金币",color:"blue"}
 scoreboard players display name time zq_side {text:"已进行(秒)",color:"gray"}
 scoreboard players set #lobby_synced zq_var 0
+scoreboard players reset #islands_cached zq_var

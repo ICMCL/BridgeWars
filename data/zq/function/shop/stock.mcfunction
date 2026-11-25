@@ -1,5 +1,4 @@
 execute unless data entity @s {CustomName:{text:"商店 / 免费换职业（存入物品会销毁）",color:"green"}} run data modify entity @s CustomName set value {text:"商店 / 免费换职业（存入物品会销毁）",color:"green"}
-function zq:shop/clean
 $function zq:shop/icon {team:"$(team)",slot:0,id:1,model:"splash_potion",name:"伤害药水 II · 6 金币",desc:"喷溅型瞬间伤害 II"}
 $function zq:shop/icon {team:"$(team)",slot:1,id:2,model:"tipped_arrow",name:"消除方块箭 ×3 · 5 金币",desc:"耐久 10，向前钻穿玩家方块"}
 $function zq:shop/icon {team:"$(team)",slot:2,id:3,model:"fire_charge",name:"烈焰弹 · 2 金币",desc:"右键发射，只击退，不破坏方块"}

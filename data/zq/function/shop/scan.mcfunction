@@ -16,5 +16,5 @@ $function zq:shop/consume {team:"$(team)",id:31}
 $function zq:shop/consume {team:"$(team)",id:32}
 $function zq:shop/consume {team:"$(team)",id:33}
 $function zq:shop/consume {team:"$(team)",id:34}
-$execute store result score #icons zq_var run clear @s *[custom_data~{zq_shop:1},!custom_data~{team:"$(team)"}] 0
-execute if score #icons zq_var matches 1.. run function zq:shop/reject_icons
+$execute store result score #icons zq_var run function zq:shop/has_icon {icon:'barrier[custom_data~{zq_shop:1},!custom_data~{team:"$(team)"}]'}
+execute if score #icons zq_var matches 1 run function zq:shop/reject_icons

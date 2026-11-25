@@ -37,9 +37,38 @@ execute in zq:arena unless entity @e[type=marker,tag=zq_flag_red] run scoreboard
 execute in zq:arena unless entity @e[type=marker,tag=zq_flag_blue] run scoreboard players add #errors zq_var 1
 execute in zq:arena unless entity @e[type=chest_minecart,tag=zq_m] run scoreboard players add #errors zq_var 1
 
+# Repair both islands without overwriting a player block in template air or repairing during a move.
+execute in zq:arena run setblock -40 100 1 air
+execute in zq:arena run setblock 40 99 0 air
+execute in zq:arena run setblock -46 97 0 red_concrete
+scoreboard players set #pbusy zq_var 1
+execute in zq:arena run function zq:map/protect
+execute in zq:arena unless block -40 100 1 air run scoreboard players add #errors zq_var 1
+scoreboard players set #pbusy zq_var 0
+execute in zq:arena run function zq:map/protect
+execute unless score #islands_cached zq_var matches 1 run scoreboard players add #errors zq_var 1
+execute in zq:arena unless block -40 100 1 smooth_stone run scoreboard players add #errors zq_var 1
+execute in zq:arena unless block 40 99 0 stone run scoreboard players add #errors zq_var 1
+execute in zq:arena unless block -46 97 0 red_concrete run scoreboard players add #errors zq_var 1
+
 function zq:game/stop
 execute unless score #running zq_var matches 0 run scoreboard players add #errors zq_var 1
 function zq:cfg/defaults_rules
 function zq:cfg/calc
 function zq:lobby/preview
 execute in minecraft:overworld unless block 0 140 0 air run scoreboard players add #errors zq_var 1
+
+# Supply caps count stacks, not slots, and must not double-count the selected hotbar slot.
+item replace entity @s hotbar.0 with arrow 3
+item replace entity @s inventory.0 with arrow 1
+item replace entity @s weapon.offhand with arrow 2
+item replace entity @s player.cursor with arrow 1
+item replace entity @s player.crafting.0 with arrow 1
+function zq:kit/refill {m:7,clr:'arrow',it:'arrow'}
+function zq:kit/count {item:'arrow'}
+execute unless score #n zq_var matches 8 run scoreboard players add #errors zq_var 1
+clear @s arrow
+function zq:kit/refill {m:7,clr:'arrow',it:'arrow'}
+function zq:kit/count {item:'arrow'}
+execute unless score #n zq_var matches 1 run scoreboard players add #errors zq_var 1
+clear @s arrow

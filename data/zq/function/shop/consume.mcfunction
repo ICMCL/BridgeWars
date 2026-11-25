@@ -1,4 +1,6 @@
-$execute store result score #icons zq_var run clear @s *[custom_data~{zq_shop:1,buy:$(id),team:"$(team)"}] 1
+$execute store result score #icons zq_var run function zq:shop/has_icon {icon:'barrier[custom_data~{zq_shop:1,buy:$(id),team:"$(team)"}]'}
+execute if score #icons zq_var matches 0 run return 0
+$execute store result score #icons zq_var run clear @s barrier[custom_data~{zq_shop:1,buy:$(id),team:"$(team)"}] 1
 execute unless score #icons zq_var matches 1.. run return 0
 $scoreboard players set @s zq_buy $(id)
 execute if score @s zq_buy matches ..25 if score #o_shop zq_var matches 0 run scoreboard players set @s zq_buy 0

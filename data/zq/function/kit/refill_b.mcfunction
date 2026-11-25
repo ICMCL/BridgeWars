@@ -1,2 +1,2 @@
-$execute store result score #n zq_var run clear @s $(wi) 0
+$function zq:kit/count {item:'$(wi)'}
 $execute if score #n zq_var matches ..31 run give @s $(wi) 1

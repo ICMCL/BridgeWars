@@ -1,6 +1,7 @@
-# 搬岛时等待分片完成，避免旧位置复原出重复岛屿
-execute unless score #pbusy zq_var matches 1 at @e[type=marker,tag=zq_spawn_red,limit=1] run clone from minecraft:overworld -46 137 -4 -30 140 4 to zq:arena ~-11 ~-4 ~-4 filtered #zq:island force
-execute unless score #pbusy zq_var matches 1 at @e[type=marker,tag=zq_spawn_blue,limit=1] run clone from minecraft:overworld 29 137 -4 45 140 4 to zq:arena ~-5 ~-4 ~-4 filtered #zq:island force
+# masked 只比较受保护的非空气方块；玩家搭桥不触发修复。搬岛期间不在旧位置复原。
+execute unless score #islands_cached zq_var matches 1 run function zq:map/cache_islands
+execute if score #islands_cached zq_var matches 1 unless score #pbusy zq_var matches 1 at @e[type=marker,tag=zq_spawn_red,limit=1] unless blocks -46 -64 -4 -30 -61 4 ~-11 ~-4 ~-4 masked run clone -46 -64 -4 -30 -61 4 ~-11 ~-4 ~-4 masked force
+execute if score #islands_cached zq_var matches 1 unless score #pbusy zq_var matches 1 at @e[type=marker,tag=zq_spawn_blue,limit=1] unless blocks 29 -64 -4 45 -61 4 ~-5 ~-4 ~-4 masked run clone 29 -64 -4 45 -61 4 ~-5 ~-4 ~-4 masked force
 # 每 tick：基地 3×3 地板复原、上方清空；旗台金块复原
 execute at @e[type=marker,tag=zq_spawn_red,limit=1] run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 red_glazed_terracotta
 execute at @e[type=marker,tag=zq_spawn_red,limit=1] run fill ~-1 ~ ~-1 ~1 ~2 ~1 air
